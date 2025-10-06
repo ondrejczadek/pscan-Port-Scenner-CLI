@@ -43,8 +43,8 @@ Place these files in the same folder (e.g., `C:\Users\you\tools\pyscan\`):
 
 ```bat
 @echo off
-python "%~dp0pyscan.py" %*
-%~dp0 runs the script from the .bat folder.
+set script=%~n0.py
+python "%~dp0%script%" %*
 ```
 - `%~dp0` runs the script from the `.bat` folder.
 - `%*` forwards all CLI arguments.
